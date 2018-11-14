@@ -129,6 +129,9 @@ class VehicleClient:
         env_state = self.client.call('simGetGroundTruthEnvironment', vehicle_name)
         return EnvironmentState.from_msgpack(env_state)
     simGetGroundTruthEnvironment.__annotations__ = {'return': EnvironmentState}
+    def simGetPositionWRTOrigin(self, vehicle_name = ''):
+        position = self.client.call('simGetPositionWRTOrigin', vehicle_name)
+        return Vector3r.from_msgpack(position)
 
     # lidar APIs
     def getLidarData(self, lidar_name = '', vehicle_name = ''):

@@ -254,6 +254,11 @@ msr::airlib::Environment::State RpcLibClientBase::simGetGroundTruthEnvironment(c
     return pimpl_->client.call("simGetGroundTruthEnvironment", vehicle_name).as<RpcLibAdapatorsBase::EnvironmentState>().to();;
 }
 
+msr::airlib::Vector3r RpcLibClientBase::simGetPositionWRTOrigin(const std::string& vehicle_name) const
+{
+    return pimpl_->client.call("simGetPositionWRTOrigin", vehicle_name).as<RpcLibAdapatorsBase::Vector3r>().to();
+}
+
 void RpcLibClientBase::cancelLastTask(const std::string& vehicle_name)
 {
     pimpl_->client.call("cancelLastTask", vehicle_name);

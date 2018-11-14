@@ -512,6 +512,12 @@ const msr::airlib::Environment* PawnSimApi::getGroundTruthEnvironment() const
     return environment_.get();
 }
 
+const msr::airlib::Vector3r PawnSimApi::getPositionWRTOrigin() const
+{
+	FVector pawn_position = params_.pawn->GetActorLocation();
+	return Vector3r(pawn_position.X, pawn_position.Y, pawn_position.Z);
+}
+
 std::string PawnSimApi::getRecordFileLine(bool is_header_line) const
 {
     if (is_header_line) {

@@ -54,6 +54,7 @@ public:
     virtual Pose getPose() const = 0;
     virtual void setPose(const Pose& pose, bool ignore_collision) = 0;
     virtual const Kinematics::State* getGroundTruthKinematics() const = 0;
+    virtual const msr::airlib::Vector3r getPositionWRTOrigin() const = 0;
     virtual const msr::airlib::Environment* getGroundTruthEnvironment() const = 0;
 
     virtual CameraInfo getCameraInfo(const std::string& camera_name) const = 0;

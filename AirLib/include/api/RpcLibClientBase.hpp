@@ -69,6 +69,7 @@ public:
 
     msr::airlib::Kinematics::State simGetGroundTruthKinematics(const std::string& vehicle_name = "") const;
     msr::airlib::Environment::State simGetGroundTruthEnvironment(const std::string& vehicle_name = "") const;
+    msr::airlib::Vector3r simGetPositionWRTOrigin(const std::string& vehicle_name = "") const;
 
     //----------- APIs to control ACharacter in scene ----------/
     void simCharSetFaceExpression(const std::string& expression_name, float value, const std::string& character_name = "");
