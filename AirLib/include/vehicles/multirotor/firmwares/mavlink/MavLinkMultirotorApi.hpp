@@ -85,6 +85,8 @@ public: //methods
     //update sensors in PX4 stack
     virtual void update() override
     {
+        MultirotorApiBase::update();
+
         if (sensors_ == nullptr || connection_ == nullptr || !connection_->isOpen())
             return;
 
@@ -767,7 +769,7 @@ private: //methods
             test.system_status = 0;
             return true;
         }
-        catch (std::exception) {
+        catch (std::exception&) {
             return false;
         }
     }
