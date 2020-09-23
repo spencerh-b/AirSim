@@ -1,16 +1,17 @@
-import setup_path 
 import airsim
-
+import cv2
 import numpy as np
 import os
-import tempfile
 import pprint
+import setup_path 
+import tempfile
 
 # connect to the AirSim simulator
 num_agents = 10
 
 client = airsim.MultirotorClient()
 client.confirmConnection()
+
 for i in range(0,num_agents):
     client.enableApiControl(True, "Drone"+str(i))
     client.armDisarm(True, "Drone"+str(i))

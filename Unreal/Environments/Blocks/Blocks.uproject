@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{1C52488A-2209-030E-0039-036E53F29235}",
+	"EngineAssociation": "{00042DEC-08D8-5F05-37EF-CF64E39A7409}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -17,6 +17,14 @@
 		{
 			"Name": "AirSim",
 			"Enabled": true
+		},
+		{
+			"Name": "SteamVR",
+			"Enabled": false
+		},
+		{
+			"Name": "OculusVR",
+			"Enabled": false
 		}
 	]
 }
